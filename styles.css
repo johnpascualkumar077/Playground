@@ -6,9 +6,11 @@
   --text: #171717;
   --muted: #5b5248;
   --line: rgba(23, 23, 23, 0.12);
+  --line-strong: rgba(23, 23, 23, 0.2);
   --coral: #e6654c;
   --gold: #c2871d;
   --blue: #3567d6;
+  --mint: #1c8f77;
   --shadow: 0 24px 80px rgba(79, 48, 20, 0.12);
 }
 
@@ -48,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font: inherit;
+}
+
 .page-shell {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
@@ -70,7 +76,10 @@ a {
 .button,
 .signal-label,
 .project-meta,
-.timeline-item span {
+.timeline-item span,
+.capability-head,
+.panel-header,
+.panel-button {
   font-family: "Space Grotesk", sans-serif;
 }
 
@@ -124,7 +133,9 @@ a {
 .section-heading h2,
 .project-card h3,
 .timeline-item h3,
-.contact-section h2 {
+.contact-section h2,
+.capability-card h3,
+.showcase-copy h3 {
   margin: 0;
   line-height: 1.02;
 }
@@ -143,7 +154,12 @@ a {
 .intro-grid p,
 .project-card p,
 .timeline-item p,
-.contact-section p {
+.contact-section p,
+.capability-card p,
+.showcase-copy p,
+.option-list,
+.field-list,
+.data-table {
   color: var(--muted);
   line-height: 1.9;
 }
@@ -199,7 +215,10 @@ a {
 .contact-section,
 .timeline-item,
 .intro-grid,
-.signal-card {
+.signal-card,
+.capability-card,
+.product-showcase,
+.ui-panel {
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: var(--shadow);
@@ -259,7 +278,8 @@ a {
 .metric-grid p,
 .project-card ul,
 .contact-card a,
-.project-meta span {
+.project-meta span,
+.capability-card ul {
   color: var(--muted);
 }
 
@@ -300,25 +320,29 @@ a {
   font-family: "Space Grotesk", sans-serif;
 }
 
-.projects {
+.projects,
+.capability-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-.project-card {
+.project-card,
+.capability-card {
   min-height: 340px;
   padding: 24px;
   border-radius: 28px;
 }
 
-.project-card h3 {
+.project-card h3,
+.capability-card h3 {
   margin-top: 18px;
   font-size: 1.7rem;
   letter-spacing: -0.04em;
 }
 
-.project-card ul {
+.project-card ul,
+.capability-card ul {
   margin: 20px 0 0;
   padding-left: 18px;
   line-height: 1.8;
@@ -340,6 +364,125 @@ a {
   background:
     linear-gradient(180deg, rgba(242, 247, 255, 0.92), rgba(255, 255, 255, 0.74)),
     linear-gradient(120deg, rgba(53, 103, 214, 0.16), transparent);
+}
+
+.capability-card {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 248, 0.92), rgba(255, 255, 255, 0.74)),
+    linear-gradient(135deg, rgba(28, 143, 119, 0.08), transparent 55%);
+}
+
+.capability-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.capability-head strong {
+  font-size: 1.1rem;
+}
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  margin-top: 22px;
+  padding: 28px;
+  border-radius: 32px;
+}
+
+.showcase-panels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ui-panel {
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.panel-header {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.panel-header span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.panel-header strong {
+  font-size: 1.2rem;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.price-row b {
+  font-size: 2rem;
+}
+
+.option-list,
+.field-list,
+.data-table {
+  display: grid;
+  gap: 10px;
+}
+
+.option-list div,
+.field-value,
+.data-row {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(247, 242, 234, 0.92);
+  border: 1px solid rgba(23, 23, 23, 0.08);
+}
+
+.field-list label {
+  display: grid;
+  gap: 6px;
+}
+
+.field-list span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.data-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.data-head {
+  background: rgba(53, 103, 214, 0.08);
+  border-color: rgba(53, 103, 214, 0.16);
+  font-weight: 700;
+}
+
+.panel-button {
+  width: 100%;
+  margin-top: 16px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--text);
+  color: #fffaf4;
+}
+
+.panel-button.alt {
+  background: var(--blue);
 }
 
 .timeline {
@@ -389,7 +532,7 @@ a {
 .contact-card a:hover,
 .contact-card a:focus-visible {
   transform: translateX(6px);
-  border-color: rgba(23, 23, 23, 0.28);
+  border-color: var(--line-strong);
 }
 
 .reveal {
@@ -403,11 +546,19 @@ a {
   transform: translateY(0);
 }
 
+@media (max-width: 1100px) {
+  .showcase-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 980px) {
   .hero,
   .intro-grid,
   .contact-section,
-  .projects {
+  .projects,
+  .capability-grid,
+  .product-showcase {
     grid-template-columns: 1fr;
   }
 
@@ -449,14 +600,18 @@ a {
     width: 100%;
   }
 
-  .timeline-item {
+  .timeline-item,
+  .data-row {
     grid-template-columns: 1fr;
   }
 
   .contact-section,
   .intro-grid,
   .hero-panel,
-  .project-card {
+  .project-card,
+  .capability-card,
+  .product-showcase,
+  .ui-panel {
     padding: 22px;
     border-radius: 24px;
   }

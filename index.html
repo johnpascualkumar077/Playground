@@ -22,6 +22,7 @@
       <a class="brand" href="#top">STEVE / BUILD</a>
       <nav class="site-nav">
         <a href="#projects">Projects</a>
+        <a href="#capabilities">Capabilities</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -41,7 +42,7 @@
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#projects">制作例を見る</a>
-            <a class="button secondary" href="#contact">相談する</a>
+            <a class="button secondary" href="#capabilities">機能を見る</a>
           </div>
         </div>
 
@@ -149,6 +150,131 @@
               <li>Frontend Engineering</li>
             </ul>
           </article>
+        </div>
+      </section>
+
+      <section class="section capabilities-section" id="capabilities">
+        <div class="section-heading reveal">
+          <p class="eyebrow">CAPABILITIES</p>
+          <h2>決済、登録、管理まで含めたプロダクト機能も組み込めます</h2>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <div class="capability-head">
+              <span>Payments</span>
+              <strong>01</strong>
+            </div>
+            <h3>決済手段の実装</h3>
+            <p>
+              クレジットカード、Apple Pay、Google Pay、銀行振込など、
+              複数の支払い導線をUI設計から実装までつなげられます。
+            </p>
+            <ul>
+              <li>Stripe / checkout UI</li>
+              <li>プラン選択と請求導線</li>
+              <li>支払い状態の表示</li>
+            </ul>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="capability-head">
+              <span>Accounts</span>
+              <strong>02</strong>
+            </div>
+            <h3>ユーザー登録フロー</h3>
+            <p>
+              メール登録、SNSログイン、プロフィール入力、認証ステップまで、
+              離脱しにくい導線でまとめて設計できます。
+            </p>
+            <ul>
+              <li>登録 / ログイン UI</li>
+              <li>認証とバリデーション</li>
+              <li>オンボーディング設計</li>
+            </ul>
+          </article>
+
+          <article class="capability-card reveal">
+            <div class="capability-head">
+              <span>Data</span>
+              <strong>03</strong>
+            </div>
+            <h3>データ管理画面</h3>
+            <p>
+              顧客、注文、会員ステータス、売上などの情報を、
+              運用者が迷わず扱える一覧・詳細・編集画面に落とし込みます。
+            </p>
+            <ul>
+              <li>テーブル / フィルター</li>
+              <li>CRUD 操作の整理</li>
+              <li>権限ごとの表示制御</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="product-showcase reveal">
+          <div class="showcase-copy">
+            <p class="eyebrow">FEATURE MOCKUP</p>
+            <h3>ECや会員制サービスを想定した画面イメージ</h3>
+            <p>
+              単なるサイト制作だけでなく、売上につながる機能部分まで見据えた設計ができます。
+              画面の印象と業務運用の両方を崩さず組み立てます。
+            </p>
+          </div>
+
+          <div class="showcase-panels">
+            <article class="ui-panel payment-panel">
+              <div class="panel-header">
+                <span>Checkout</span>
+                <strong>Monthly Plan</strong>
+              </div>
+              <div class="price-row">
+                <b>¥4,980</b>
+                <small>/ month</small>
+              </div>
+              <div class="option-list">
+                <div>Visa ending in 2048</div>
+                <div>Apple Pay enabled</div>
+                <div>Bank transfer available</div>
+              </div>
+              <button class="panel-button">支払いを確定</button>
+            </article>
+
+            <article class="ui-panel register-panel">
+              <div class="panel-header">
+                <span>Sign Up</span>
+                <strong>Create account</strong>
+              </div>
+              <div class="field-list">
+                <label>
+                  <span>Email</span>
+                  <div class="field-value">hello@example.com</div>
+                </label>
+                <label>
+                  <span>Password</span>
+                  <div class="field-value">••••••••••••</div>
+                </label>
+                <label>
+                  <span>Plan</span>
+                  <div class="field-value">Business</div>
+                </label>
+              </div>
+              <button class="panel-button alt">登録して始める</button>
+            </article>
+
+            <article class="ui-panel data-panel">
+              <div class="panel-header">
+                <span>Admin</span>
+                <strong>Customer Data</strong>
+              </div>
+              <div class="data-table">
+                <div class="data-row data-head"><span>User</span><span>Status</span><span>Total</span></div>
+                <div class="data-row"><span>Ayaka N.</span><span>Paid</span><span>¥24,900</span></div>
+                <div class="data-row"><span>Ken S.</span><span>Trial</span><span>¥0</span></div>
+                <div class="data-row"><span>Mina T.</span><span>Renewed</span><span>¥9,800</span></div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
